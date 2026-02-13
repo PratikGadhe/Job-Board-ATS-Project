@@ -1,0 +1,46 @@
+# ======================
+# Python / Django
+# ======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Django secrets
+.env
+
+# ======================
+# React / Node
+# ======================
+node_modules/
+build/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# VS Code
+# ======================
+.vscode/
+
+# ======================
+# Mac temp
+# ======================
+*.swp
+*.swo
