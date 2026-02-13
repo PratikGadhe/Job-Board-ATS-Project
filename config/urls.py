@@ -21,7 +21,6 @@ from jobs.views import EmployerApplicationsView
 from users.views import current_user
 
 
-
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -35,25 +34,19 @@ from jobs.views import (
 )
 
 router = DefaultRouter()
-router.register(r'companies', CompanyViewSet)
-router.register(r'jobs', JobViewSet)
-router.register(r'profiles', CandidateProfileViewSet)
-router.register(r'applications', ApplicationViewSet)
+router.register(r"companies", CompanyViewSet)
+router.register(r"jobs", JobViewSet)
+router.register(r"profiles", CandidateProfileViewSet)
+router.register(r"applications", ApplicationViewSet)
 
 urlpatterns = [
-    path('api/employer/applications/', EmployerApplicationsView.as_view()),
-    path('api/user/', current_user, name='current_user'),
-
-
-
-    path('admin/', admin.site.urls),
-
+    path("api/employer/applications/", EmployerApplicationsView.as_view()),
+    path("api/user/", current_user, name="current_user"),
+    path("admin/", admin.site.urls),
     # JWT
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
+    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     # API routes
-    path('api/', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls')),
-
+    path("api/", include(router.urls)),
+    path("api-auth/", include("rest_framework.urls")),
 ]

@@ -141,4 +141,3 @@ SIMPLE_JWT = {
 AUTH_USER_MODEL = 'users.User'
 CORS_ALLOW_ALL_ORIGINS = True
 
-
